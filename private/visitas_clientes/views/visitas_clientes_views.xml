@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_visitas_clientes" model="ir.actions.act_window">
+        <field name="name">Visitas Clientes</field>
+        <field name="res_model">visitas.clientes</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Registe visitas técnicas ou comerciais aos clientes.</p>
+        </field>
+    </record>
+
+    <!-- Search view -->
+    <record id="view_visitas_clientes_search" model="ir.ui.view">
+        <field name="name">visitas.clientes.search</field>
+        <field name="model">visitas.clientes</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id"/>
+                <field name="user_id"/>
+                <filter name="state_draft" string="Rascunho" domain="[('estado','=','draft')]"/>
+                <filter name="state_confirmada" string="Confirmada" domain="[('estado','=','confirmada')]"/>
+                <filter name="state_realizada" string="Realizada" domain="[('estado','=','realizada')]"/>
+            </search>
+        </field>
+    </record>
+
+    <menuitem id="menu_visitas_root" name="Visitas" sequence="90"/>
+    <menuitem id="menu_visitas_clientes" name="Visitas a Clientes" parent="menu_visitas_root" sequence="10"/>
+
+    <record id="action_visitas_clientes_menu" model="ir.actions.act_window">
+        <field name="name">Visitas a Clientes</field>
+        <field name="res_model">visitas.clientes</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_visitas_clientes_action" name="Listar" parent="menu_visitas_clientes" action="action_visitas_clientes_menu"/>
+
+    <!-- List view (replaces old tree view) -->
+    <record id="view_visitas_clientes_list" model="ir.ui.view">
+        <field name="name">visitas.clientes.list</field>
+        <field name="model">visitas.clientes</field>
+        <field name="arch" type="xml">
+            <list string="Visitas">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="user_id"/>
+                <field name="data_visita"/>
+                <field name="estado"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form view -->
+    <record id="view_visitas_clientes_form" model="ir.ui.view">
+        <field name="name">visitas.clientes.form</field>
+        <field name="model">visitas.clientes</field>
+        <field name="arch" type="xml">
+            <form string="Visita Cliente">
+                <header>
+                    <field name="estado" widget="statusbar" statusbar_visible="draft,confirmada,realizada,cancelada"/>
+                    <div class="o_form_buttons_box">
+                        <button name="action_confirmar" type="object" class="btn btn-primary">
+                            <i class="fa fa-check me-1" aria-hidden="true"></i>Confirmar
+                        </button>
+                        <button name="action_realizar" type="object" class="btn btn-success">
+                            <i class="fa fa-flag-checkered me-1" aria-hidden="true"></i>Realizar
+                        </button>
+                        <button name="action_cancelar" type="object" class="btn btn-secondary">
+                            <i class="fa fa-times me-1" aria-hidden="true"></i>Cancelar
+                        </button>
+                        <button name="action_rascunho" type="object" class="btn btn-light">
+                            <i class="fa fa-undo me-1" aria-hidden="true"></i>Rascunho
+                        </button>
+                    </div>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="partner_id"/>
+                        <field name="lead_id"/>
+                        <field name="user_id"/>
+                    </group>
+                    <group>
+                        <field name="data_visita"/>
+                        <field name="tipo"/>
+                        <field name="estado"/>
+                    </group>
+                    <notebook>
+                        <page string="Notas">
+                            <field name="notas"/>
+                        </page>
+                    </notebook>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+</odoo>

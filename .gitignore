@@ -1,0 +1,35 @@
+# Ignore local Odoo build directory (case-insensitive)
+/[oO]doo/
+
+# Python artifacts
+*.pyc
+__pycache__/
+
+# Virtualenvs
+*.venv
+venv/
+env/
+.env
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Logs and databases
+*.log
+*.db
+*.sqlite3
+
+# Node / build
+node_modules/
+dist/
+build/
+
+# Misc
+*.swp
+*.tmp
+*.cache
+

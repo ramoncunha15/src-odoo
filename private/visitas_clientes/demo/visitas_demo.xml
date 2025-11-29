@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Demo partner -->
+    <record id="demo_partner_visita_1" model="res.partner">
+        <field name="name">Cliente Demo Visita 1</field>
+    </record>
+
+    <!-- Demo visita linked to demo partner -->
+    <record id="demo_visita_1" model="visitas.clientes">
+        <field name="name">VIS-DEMO-001</field>
+        <field name="partner_id" ref="demo_partner_visita_1"/>
+        <field name="data_visita">2030-01-01 10:00:00</field>
+        <field name="tipo">tecnica</field>
+        <field name="estado">draft</field>
+        <field name="notas">Visita de demonstração criada pelo módulo.</field>
+    </record>
+
+</odoo>

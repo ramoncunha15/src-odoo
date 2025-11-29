@@ -1,0 +1,8 @@
+odoo:
+  defaults:
+    depth: 1
+  remotes:
+    odoo: https://github.com/odoo/odoo.git
+    ocb: https://github.com/OCA/OCB.git
+  target: odoo
+  version: 18.0   # ou 17.0 conforme escolheste

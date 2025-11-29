@@ -1,0 +1,7 @@
+<odoo>
+    <record id="group_visitas_clientes_user" model="res.groups">
+        <field name="name">Visitas - Usuário</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+        <field name="users" eval="[(4, ref('base.group_user'))]" />
+    </record>
+</odoo>
