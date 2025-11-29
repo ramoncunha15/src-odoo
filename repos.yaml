@@ -19,7 +19,7 @@
   defaults:
     depth: $DEPTH_DEFAULT
   remotes:
-    origin: git@github.com:ramoncunha15/src-odoo.git
+    origin: https://github.com/ramoncunha15/src-odoo.git
   target: origin main
   merges:
     - origin main
