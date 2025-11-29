@@ -1,3 +1,6 @@
+# Atualização para viabilizar PR
+# Nenhuma alteração funcional.
+
 # Addons privados — `visitas_clientes`
 
 Idioma: Português (Portugal)
