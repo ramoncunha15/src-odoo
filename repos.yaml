@@ -21,3 +21,4 @@
   remotes:
     origin: git@github.com:ramoncunha15/src-odoo.git
   target: origin main
+  merges: []
