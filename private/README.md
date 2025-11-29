@@ -1,9 +1,5 @@
-# Atualização para viabilizar PR
-# Nenhuma alteração funcional.
 
 # Addons privados — `visitas_clientes`
-
-Idioma: Português (Portugal)
 
 Este diretório contém os addons privados do projecto Odoo embutido neste ambiente de desenvolvimento. O foco principal é o módulo `visitas_clientes`, que gere visitas técnicas/comerciais aos clientes.
 
@@ -144,7 +140,7 @@ O módulo é licenciado sob a GNU Lesser General Public License v3.0 (LGPL-3). C
 Contacto
 --------
 Autor / Maintainer: Ramon Cunha
-E-mail: (ver configuração do projecto)
+E-mail: ramon.cunha@formandos.cinel.pt
 
 Notas finais
 ------------
