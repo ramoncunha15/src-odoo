@@ -6,3 +6,11 @@ odoo:
     ocb: https://github.com/OCA/OCB.git
   target: odoo
   version: 18.0   # ou 17.0 conforme escolheste
+
+  
+  # OBS: Addons privados estão em `./private` (definido em `repos.yaml`).
+  # O módulo `visitas_clientes` está localizado em:
+  #   ./private/visitas_clientes
+  # Não é necessário alterar este arquivo para que o doodba clone/atualize o
+  # repositório privado — isso é controlado por `repos.yaml` (veja o bloco
+  # `./private`). Mantemos esta nota aqui para documentação.
